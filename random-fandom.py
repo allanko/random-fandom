@@ -44,4 +44,5 @@ def random_synopsis():
     sand = load_url(random_episode())
     return sand.find('meta', property='og:description')['content'] # this synopsis sometimes trails off with ellipses if it is over 500 char
     
-sand = load_url(RANDOM_URL)
+if __name__ == "__main__" and RUN:
+    print random_synopsis()
